@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Birds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Birds</h1>
+        <p id="factDisplay">Click the button to see a fun fact!</p>
+        <button id="factButton">Show Random Fact</button>
+    </div>
+    <script>
+        const funFacts = [
+            {
+                fact: "Diverse Species",
+                description: "There are approximately 10,000 different species of birds worldwide, ranging from tiny hummingbirds to large ostriches."
+            },
+            {
+                fact: "Feathered Friends",
+                description: "Birds are the only animals with feathers, which are essential for flight, insulation, and display."
+            },
+            {
+                fact: "Migration Marvels",
+                description: "Some bird species, like the Arctic Tern, migrate thousands of miles each year, traveling from the Arctic to the Antarctic and back."
+            },
+            {
+                fact: "Unique Communication",
+                description: "Birds communicate using a variety of sounds, including songs, calls, and even mimicry. Some species, like parrots, can imitate human speech."
+            },
+            {
+                fact: "Colorful Vision",
+                description: "Birds have excellent vision and can see a broader spectrum of colors than humans, including ultraviolet light."
+            },
+            {
+                fact: "Egg-cellent Reproduction",
+                description: "Most birds lay eggs, and the size, color, and shape of the eggs can vary significantly between species."
+            },
+            {
+                fact: "Social Structures",
+                description: "Many birds are social creatures and live in flocks, which can provide protection from predators and help in finding food."
+            },
+            {
+                fact: "Intelligent Creatures",
+                description: "Some birds, like crows and parrots, are known for their high intelligence and problem-solving abilities, often using tools to obtain food."
+            },
+            {
+                fact: "Long Lifespan",
+                description: "While many small birds have short lifespans, some species, like the macaw, can live for over 50 years in captivity."
+            },
+            {
+                fact: "Flightless Wonders",
+                description: "Not all birds can fly. Species like ostriches, emus, and penguins have adapted to life on the ground or in water."
+            }
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            const selectedFact = funFacts[randomIndex];
+            document.getElementById('factDisplay').innerText = `${selectedFact.fact}: ${selectedFact.description}`;
+        });
+    </script>
+</body>
+</html>
